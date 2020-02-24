@@ -17,7 +17,19 @@ constructor(props) {
     medicines: [],
     photos: [],
     listOfSites: String,
-    userDetails: String
+    userDetails: String,
+    reminders:[{ appointmentDate: "May 10",
+  appointmentLocation: "Glasgow High Street",
+  appointmentName: "Dentist appointment",
+appointmentTime: "2 PM"},
+{ appointmentDate: "JUNE 10",
+appointmentLocation: "London High Street",
+appointmentName: "Postman appointment",
+appointmentTime: "8 AM"},
+{ appointmentDate: "AUGUST 10",
+appointmentLocation: "Bristol High Street",
+appointmentName: "Chinese acupuncture appointment",
+appointmentTime: "2:37 PM"}]
   }
 }
 
@@ -26,7 +38,7 @@ componentDidMount(){
   const request = new Request();
   const contactPromise = request.get('/api/contacts')
   const photoPromise = request.get('/api/photos')
-  
+
 
 
 Promise.all([contactPromise, photoPromise])
