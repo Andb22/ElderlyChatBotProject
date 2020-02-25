@@ -7,6 +7,7 @@ import Reminder from '../components/reminders/Reminder.js'
 import Navigation from '../components/navigation/Navigation.js';
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
+import ReminderSelect from '../components/reminders/ReminderSelect';
 import '../App.css';
 
 class DisplayContainer extends Component{
@@ -39,7 +40,7 @@ constructor(props){
 
            </Route>
            <Route path="/reminders" render={(props) => {
-             return <ReminderList reminders={this.props.data.reminders}/>
+             return <ReminderSelect appointments={this.props.data.appointments}   />
            }}>
         //    <Route render={(props) => {
         // return <Reminder reminder={props.reminders}/>
@@ -53,16 +54,16 @@ constructor(props){
      </div>
    </Router>
     </div>
-    <div class="container">
-      <div class="sky"></div>
-      <div class="sea">
-      <div class="light"></div>
+    <div className="container">
+      <div className="sky"></div>
+      <div className="sea">
+      <div className="light"></div>
       </div>
-      <div class="sun"></div>
-      <div class="bird1"></div>
-      <div class="birdr1"></div>
-      <div class="bird"></div>
-      <div class="birdr"></div>
+      <div className="sun"></div>
+      <div className="bird1"></div>
+      <div className="birdr1"></div>
+      <div className="bird"></div>
+      <div className="birdr"></div>
       </div>
 
 
