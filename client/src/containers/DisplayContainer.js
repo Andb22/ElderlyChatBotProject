@@ -20,13 +20,17 @@ constructor(props){
   render (){
   return (
     <div id="router">
-    <div>
+  <div>
     <Router >
      <div>
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" >
+         <Route path="/contacts" render={(props) => {
+           return <ContactList contacts={this.props.data.contacts}/>
+         }}>
+
+
           </Route>
          <Route path="/photos" component={PhotoSlider} >
 
@@ -47,6 +51,19 @@ constructor(props){
      </div>
    </Router>
     </div>
+    <div class="container">
+      <div class="sky"></div>
+      <div class="sea">
+      <div class="light"></div>
+      </div>
+      <div class="sun"></div>
+      <div class="bird1"></div>
+      <div class="birdr1"></div>
+      <div class="bird"></div>
+      <div class="birdr"></div>
+      </div>
+
+
     </div>
 
 )

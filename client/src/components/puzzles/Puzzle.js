@@ -1,4 +1,5 @@
 import React from  'react';
+import '../../App.css';
 
 const Puzzle = (props) => {
   // if(!props.listOfSites)
@@ -9,14 +10,16 @@ const Puzzle = (props) => {
 
 
   return (
-    <div>
-    <ul className="component-list">
-      {props.listOfSites}
-      <iframe src="https://www.websudoku.com/" frameborder="0">Sudoku</iframe>
+    <div >
+    <ul className="puzzle-item">
+      <iframe src="https://www.websudoku.com/" frameborder="0" >Sudoku</iframe>
     </ul>
-    <div>
 
+    <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
+      <a href="/" id="home" >Home</a>
     </div>
+
+
     </div>
 
   )
