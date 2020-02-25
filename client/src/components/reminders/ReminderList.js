@@ -1,10 +1,9 @@
 import React from 'react';
 
 const ReminderList =(props) => {
-
   if (props.reminders.length === 0){
   	  return "Loading theminders"
-  	}
+
     // const reminders = props.reminders.map((reminder, index) => {
     //   return (
     //     <li key={index} className="compnent-item">
