@@ -38,7 +38,9 @@ constructor(props){
           <Route path="/puzzles" component={Puzzle}>
 
            </Route>
-           <Route path="/reminders" component={ReminderList}>
+           <Route path="/reminders" render={(props) => {
+             return <ReminderList reminders={this.props.data.reminders}/>
+           }}>
         //    <Route render={(props) => {
         // return <Reminder reminder={props.reminders}/>
       }} />

@@ -36,12 +36,7 @@ appointmentTime: "2:37 PM"}]
 
 
 componentDidMount(){
-<<<<<<< HEAD
-  const request = new Request();
-  const contactPromise = request.get('/api/contacts')
-  const photoPromise = request.get('/api/photos')
 
-=======
   const db= firebase.firestore();
 //  const userNamesPromise=db.collection('usernames').get()
   const contacts=db.collection('contacts').get()
@@ -55,7 +50,6 @@ componentDidMount(){
   .catch(err =>{
     console.log('error getting docs', err);
   })
->>>>>>> develop
 
   const appointment_reminders=db.collection('appointment_reminders').get()
   .then(snapshot => {
